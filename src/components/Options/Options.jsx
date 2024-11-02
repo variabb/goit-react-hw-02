@@ -1,17 +1,27 @@
-// import Feedback from "../Feedback/Feedback";
-// import s from "./Options.module.css";
-// import { useState } from "react";
+
+import s from "./Options.module.css";
+
 
 function Options({ updateFeedback, total, reset }) {
-  // console.log(feedback);
+
   
   return (
-    <>
-      <button onClick={() => updateFeedback("good")}>Good</button>
-      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
-      <button onClick={() => updateFeedback("bad")}>Bad</button>
-      {total > 0 ? <button onClick={() => reset()}>Reset</button> : null}
-    </>
+    <div className={s.buttonContainer}>
+      <button className={s.button} onClick={() => updateFeedback("good")}>
+        Good
+      </button>
+      <button className={s.button} onClick={() => updateFeedback("neutral")}>
+        Neutral
+      </button>
+      <button className={s.button} onClick={() => updateFeedback("bad")}>
+        Bad
+      </button>
+      {total > 0 ? (
+        <button className={s.button} onClick={() => reset()}>
+          Reset
+        </button>
+      ) : null}
+    </div>
   );
 }
 

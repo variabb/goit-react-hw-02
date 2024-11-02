@@ -3,7 +3,7 @@ import s from "./Notification.module.css";
 function Notification() {
   return (
     <>
-    <p>No feedback yet</p>
+    <p className={s.text}>No feedback yet</p>
     </>
   );
 }
