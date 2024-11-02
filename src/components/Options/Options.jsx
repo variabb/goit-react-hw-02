@@ -1,14 +1,13 @@
 import s from "./Options.module.css";
 
-function Options({ feedback }) {
-     
- return (
-   <>
-     <button>Good</button>
-     <button>Neutral</button>
-     <button>Bad</button>
-   </>
- );
+function Options({ updateFeedback }) {
+  return (
+    <>
+      <button onClick={() => updateFeedback("good")}>Good</button>
+      <button onClick={() => updateFeedback("neutral")}>Neutral</button>
+      <button onClick={() => updateFeedback("bad")}>Bad</button>
+    </>
+  );
 }
 
 export default Options;
